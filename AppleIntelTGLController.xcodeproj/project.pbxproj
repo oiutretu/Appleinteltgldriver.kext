@@ -1,0 +1,824 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E0D412A2F0EC44900795451 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0D41292F0EC44900795451 /* IOSurface.framework */; };
+		1E0D412C2F0EC47800795451 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0D412B2F0EC47800795451 /* IOKit.framework */; };
+		1E0D412E2F0EC49600795451 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0D412D2F0EC49600795451 /* CoreGraphics.framework */; };
+		1E40AA822F338A2E00C73AF7 /* AppleIntelTGLIOSurfaceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E40AA812F338A2E00C73AF7 /* AppleIntelTGLIOSurfaceManager.h */; };
+		1E472D0A2EFB06A300BA7707 /* IntelPerformance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472C9D2EFB06A000BA7707 /* IntelPerformance.h */; };
+		1E472D0B2EFB06A300BA7707 /* FakeIrisXEGuC_firmware.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1E472C9E2EFB06A000BA7707 /* FakeIrisXEGuC_firmware.hpp */; };
+		1E472D0C2EFB06A300BA7707 /* IntelSynchronization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472C9F2EFB06A000BA7707 /* IntelSynchronization.h */; };
+		1E472D0D2EFB06A300BA7707 /* IntelRequestOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CA02EFB06A000BA7707 /* IntelRequestOptimizer.cpp */; };
+		1E472D0E2EFB06A300BA7707 /* IntelVideoPostProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CA12EFB06A000BA7707 /* IntelVideoPostProcessing.h */; };
+		1E472D0F2EFB06A300BA7707 /* IntelContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CA22EFB06A000BA7707 /* IntelContext.cpp */; };
+		1E472D102EFB06A300BA7707 /* IntelModeSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CA32EFB06A000BA7707 /* IntelModeSet.h */; };
+		1E472D112EFB06A300BA7707 /* IntelFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CA42EFB06A000BA7707 /* IntelFramebuffer.h */; };
+		1E472D122EFB06A300BA7707 /* IntelGuC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CA52EFB06A000BA7707 /* IntelGuC.h */; };
+		1E472D132EFB06A300BA7707 /* IntelDisplayInterrupts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CA62EFB06A000BA7707 /* IntelDisplayInterrupts.cpp */; };
+		1E472D142EFB06A300BA7707 /* IntelSynchronization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CA72EFB06A000BA7707 /* IntelSynchronization.cpp */; };
+		1E472D152EFB06A300BA7707 /* IntelFramebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CA82EFB06A000BA7707 /* IntelFramebuffer.cpp */; };
+		1E472D162EFB06A300BA7707 /* IntelDPLinkTraining.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CA92EFB06A000BA7707 /* IntelDPLinkTraining.h */; };
+		1E472D172EFB06A300BA7707 /* IntelGTT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CAA2EFB06A000BA7707 /* IntelGTT.h */; };
+		1E472D182EFB06A300BA7707 /* IntelDPLinkTraining.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CAB2EFB06A000BA7707 /* IntelDPLinkTraining.cpp */; };
+		1E472D192EFB06A300BA7707 /* IntelDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CAC2EFB06A000BA7707 /* IntelDisplay.cpp */; };
+		1E472D1A2EFB06A300BA7707 /* IntelRuntimePM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CAD2EFB06A000BA7707 /* IntelRuntimePM.cpp */; };
+		1E472D1B2EFB06A300BA7707 /* IntelPerformance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CAE2EFB06A000BA7707 /* IntelPerformance.cpp */; };
+		1E472D1C2EFB06A300BA7707 /* AppleIntelTGLEGLFramebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CAF2EFB06A000BA7707 /* AppleIntelTGLEGLFramebuffer.cpp */; };
+		1E472D1D2EFB06A300BA7707 /* IntelRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CB02EFB06A000BA7707 /* IntelRequest.cpp */; };
+		1E472D1E2EFB06A300BA7707 /* IntelMetalComputeEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CB12EFB06A000BA7707 /* IntelMetalComputeEncoder.cpp */; };
+		1E472D1F2EFB06A300BA7707 /* IntelContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CB22EFB06A000BA7707 /* IntelContext.h */; };
+		1E472D202EFB06A300BA7707 /* IntelBatchValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CB32EFB06A000BA7707 /* IntelBatchValidator.h */; };
+		1E472D222EFB06A300BA7707 /* IntelDPAux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CB52EFB06A000BA7707 /* IntelDPAux.cpp */; };
+		1E472D232EFB06A300BA7707 /* IntelMetalCommandBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CB62EFB06A000BA7707 /* IntelMetalCommandBuffer.cpp */; };
+		1E472D242EFB06A300BA7707 /* IntelCompute.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CB72EFB06A000BA7707 /* IntelCompute.h */; };
+		1E472D252EFB06A300BA7707 /* IntelMetalTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CB82EFB06A000BA7707 /* IntelMetalTexture.h */; };
+		1E472D262EFB06A300BA7707 /* intel_display_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CB92EFB06A000BA7707 /* intel_display_types.h */; };
+		1E472D272EFB06A300BA7707 /* IntelGEM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CBA2EFB06A000BA7707 /* IntelGEM.cpp */; };
+		1E472D282EFB06A300BA7707 /* IntelGTInterrupts.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CBB2EFB06A000BA7707 /* IntelGTInterrupts.h */; };
+		1E472D292EFB06A300BA7707 /* IntelDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CBC2EFB06A000BA7707 /* IntelDisplay.h */; };
+		1E472D2A2EFB06A300BA7707 /* IntelMetalSamplerState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CBD2EFB06A000BA7707 /* IntelMetalSamplerState.cpp */; };
+		1E472D2B2EFB06A300BA7707 /* IntelModeSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CBE2EFB06A100BA7707 /* IntelModeSet.cpp */; };
+		1E472D2C2EFB06A300BA7707 /* IntelMemoryOptimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CBF2EFB06A100BA7707 /* IntelMemoryOptimizer.h */; };
+		1E472D2D2EFB06A300BA7707 /* IntelVideoDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CC02EFB06A100BA7707 /* IntelVideoDecoder.cpp */; };
+		1E472D2E2EFB06A300BA7707 /* IntelGuCSubmission.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CC12EFB06A100BA7707 /* IntelGuCSubmission.cpp */; };
+		1E472D2F2EFB06A300BA7707 /* intel_power_regs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CC22EFB06A100BA7707 /* intel_power_regs.h */; };
+		1E472D302EFB06A300BA7707 /* IntelMetalShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CC32EFB06A100BA7707 /* IntelMetalShader.cpp */; };
+		1E472D312EFB06A300BA7707 /* IntelGuCSubmission.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CC42EFB06A100BA7707 /* IntelGuCSubmission.h */; };
+		1E472D322EFB06A300BA7707 /* IntelGEM.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CC52EFB06A100BA7707 /* IntelGEM.h */; };
+		1E472D332EFB06A300BA7707 /* IntelRingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CC62EFB06A100BA7707 /* IntelRingBuffer.cpp */; };
+		1E472D342EFB06A300BA7707 /* AppleIntelTGLController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CC72EFB06A100BA7707 /* AppleIntelTGLController.h */; };
+		1E472D352EFB06A300BA7707 /* IntelVideoEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CC82EFB06A100BA7707 /* IntelVideoEncoder.cpp */; };
+		1E472D362EFB06A300BA7707 /* IntelPowerManagement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CC92EFB06A100BA7707 /* IntelPowerManagement.cpp */; };
+		1E472D372EFB06A300BA7707 /* IntelGTInterrupts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CCA2EFB06A100BA7707 /* IntelGTInterrupts.cpp */; };
+		1E472D382EFB06A300BA7707 /* Intel3DPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CCB2EFB06A100BA7707 /* Intel3DPipeline.cpp */; };
+		1E472D392EFB06A300BA7707 /* IntelVideoPostProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CCC2EFB06A100BA7707 /* IntelVideoPostProcessing.cpp */; };
+		1E472D3A2EFB06A300BA7707 /* IntelDisplayInterrupts.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CCD2EFB06A100BA7707 /* IntelDisplayInterrupts.h */; };
+		1E472D3B2EFB06A300BA7707 /* IntelMetalRenderPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CCE2EFB06A100BA7707 /* IntelMetalRenderPipeline.h */; };
+		1E472D3C2EFB06A300BA7707 /* IntelPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CCF2EFB06A100BA7707 /* IntelPipe.cpp */; };
+		1E472D3D2EFB06A300BA7707 /* IntelGTPowerManagement.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CD02EFB06A100BA7707 /* IntelGTPowerManagement.h */; };
+		1E472D3E2EFB06A300BA7707 /* IntelMemoryOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CD12EFB06A100BA7707 /* IntelMemoryOptimizer.cpp */; };
+		1E472D3F2EFB06A300BA7707 /* IntelMetalCommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CD22EFB06A100BA7707 /* IntelMetalCommandQueue.cpp */; };
+		1E472D402EFB06A300BA7707 /* IntelGEMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CD32EFB06A100BA7707 /* IntelGEMObject.h */; };
+		1E472D412EFB06A300BA7707 /* IntelDPLL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CD42EFB06A100BA7707 /* IntelDPLL.cpp */; };
+		1E472D422EFB06A300BA7707 /* IntelCompute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CD52EFB06A100BA7707 /* IntelCompute.cpp */; };
+		1E472D432EFB06A300BA7707 /* IntelPipe.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CD62EFB06A100BA7707 /* IntelPipe.h */; };
+		1E472D442EFB06A300BA7707 /* IntelMetalBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CD72EFB06A100BA7707 /* IntelMetalBuffer.h */; };
+		1E472D452EFB06A300BA7707 /* Intel3DPipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CD82EFB06A100BA7707 /* Intel3DPipeline.h */; };
+		1E472D462EFB06A300BA7707 /* IntelGuCSLPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CD92EFB06A100BA7707 /* IntelGuCSLPC.cpp */; };
+		1E472D472EFB06A300BA7707 /* IntelDPLL.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CDA2EFB06A100BA7707 /* IntelDPLL.h */; };
+		1E472D482EFB06A300BA7707 /* IntelMetalCommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CDB2EFB06A100BA7707 /* IntelMetalCommandQueue.h */; };
+		1E472D492EFB06A300BA7707 /* IntelBatchBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CDC2EFB06A100BA7707 /* IntelBatchBuffer.cpp */; };
+		1E472D4A2EFB06A300BA7707 /* IntelGuC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CDD2EFB06A100BA7707 /* IntelGuC.cpp */; };
+		1E472D4B2EFB06A300BA7707 /* IntelVideoEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CDE2EFB06A100BA7707 /* IntelVideoEncoder.h */; };
+		1E472D4C2EFB06A300BA7707 /* IntelGTT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CDF2EFB06A100BA7707 /* IntelGTT.cpp */; };
+		1E472D4D2EFB06A300BA7707 /* IntelMetalCommandTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE02EFB06A200BA7707 /* IntelMetalCommandTranslator.h */; };
+		1E472D4F2EFB06A300BA7707 /* IntelVideoDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE22EFB06A200BA7707 /* IntelVideoDecoder.h */; };
+		1E472D502EFB06A300BA7707 /* IntelMetalComputeEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE32EFB06A200BA7707 /* IntelMetalComputeEncoder.h */; };
+		1E472D512EFB06A300BA7707 /* IntelMetalRenderTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE42EFB06A200BA7707 /* IntelMetalRenderTarget.h */; };
+		1E472D522EFB06A300BA7707 /* IntelMetalShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE52EFB06A200BA7707 /* IntelMetalShader.h */; };
+		1E472D532EFB06A300BA7707 /* IntelMetalSamplerState.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE62EFB06A200BA7707 /* IntelMetalSamplerState.h */; };
+		1E472D542EFB06A300BA7707 /* IntelGTPowerManagement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CE72EFB06A200BA7707 /* IntelGTPowerManagement.cpp */; };
+		1E472D552EFB06A300BA7707 /* IntelMetalComputePipeline.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE82EFB06A200BA7707 /* IntelMetalComputePipeline.h */; };
+		1E472D562EFB06A300BA7707 /* IntelPowerManagement.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CE92EFB06A200BA7707 /* IntelPowerManagement.h */; };
+		1E472D572EFB06A300BA7707 /* IntelPPGTT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CEA2EFB06A200BA7707 /* IntelPPGTT.h */; };
+		1E472D582EFB06A300BA7707 /* IntelBatchBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CEB2EFB06A200BA7707 /* IntelBatchBuffer.h */; };
+		1E472D592EFB06A300BA7707 /* IntelRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CEC2EFB06A200BA7707 /* IntelRequest.h */; };
+		1E472D5B2EFB06A300BA7707 /* IntelGuCSLPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CEE2EFB06A200BA7707 /* IntelGuCSLPC.h */; };
+		1E472D5C2EFB06A300BA7707 /* IntelGEMObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CEF2EFB06A200BA7707 /* IntelGEMObject.cpp */; };
+		1E472D5D2EFB06A300BA7707 /* IntelPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF02EFB06A200BA7707 /* IntelPort.cpp */; };
+		1E472D5E2EFB06A300BA7707 /* IntelGuCLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CF12EFB06A200BA7707 /* IntelGuCLog.h */; };
+		1E472D5F2EFB06A300BA7707 /* IntelBatchValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF22EFB06A200BA7707 /* IntelBatchValidator.cpp */; };
+		1E472D602EFB06A300BA7707 /* IntelGuCLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF32EFB06A200BA7707 /* IntelGuCLog.cpp */; };
+		1E472D612EFB06A300BA7707 /* IntelBlitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF42EFB06A200BA7707 /* IntelBlitter.cpp */; };
+		1E472D622EFB06A300BA7707 /* IntelMetalRenderTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF52EFB06A200BA7707 /* IntelMetalRenderTarget.cpp */; };
+		1E472D632EFB06A300BA7707 /* IntelMetalComputePipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF62EFB06A200BA7707 /* IntelMetalComputePipeline.cpp */; };
+		1E472D642EFB06A300BA7707 /* IntelMetalCommandBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CF72EFB06A200BA7707 /* IntelMetalCommandBuffer.h */; };
+		1E472D652EFB06A300BA7707 /* IntelUncore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF82EFB06A200BA7707 /* IntelUncore.cpp */; };
+		1E472D662EFB06A300BA7707 /* IntelMetalCommandTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CF92EFB06A200BA7707 /* IntelMetalCommandTranslator.cpp */; };
+		1E472D672EFB06A300BA7707 /* IntelBlitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CFA2EFB06A200BA7707 /* IntelBlitter.h */; };
+		1E472D682EFB06A300BA7707 /* IntelMetalRenderPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CFB2EFB06A200BA7707 /* IntelMetalRenderPipeline.cpp */; };
+		1E472D692EFB06A300BA7707 /* IntelRingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CFC2EFB06A200BA7707 /* IntelRingBuffer.h */; };
+		1E472D6A2EFB06A300BA7707 /* IntelDPAux.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CFD2EFB06A200BA7707 /* IntelDPAux.h */; };
+		1E472D6B2EFB06A300BA7707 /* IntelUncore.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472CFE2EFB06A200BA7707 /* IntelUncore.h */; };
+		1E472D6C2EFB06A300BA7707 /* IntelPPGTT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472CFF2EFB06A200BA7707 /* IntelPPGTT.cpp */; };
+		1E472D6D2EFB06A300BA7707 /* IntelMetalTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472D002EFB06A200BA7707 /* IntelMetalTexture.cpp */; };
+		1E472D6E2EFB06A300BA7707 /* AppleIntelTGLController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472D012EFB06A300BA7707 /* AppleIntelTGLController.cpp */; };
+		1E472D6F2EFB06A300BA7707 /* intel_gt_power_regs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472D022EFB06A300BA7707 /* intel_gt_power_regs.h */; };
+		1E472D702EFB06A300BA7707 /* IntelRequestOptimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472D032EFB06A300BA7707 /* IntelRequestOptimizer.h */; };
+		1E472D712EFB06A300BA7707 /* IntelMetalBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E472D042EFB06A300BA7707 /* IntelMetalBuffer.cpp */; };
+		1E472D722EFB06A300BA7707 /* IntelRuntimePM.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472D052EFB06A300BA7707 /* IntelRuntimePM.h */; };
+		1E472D732EFB06A300BA7707 /* FakeIrisXEGuC_firmware.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E472D062EFB06A300BA7707 /* FakeIrisXEGuC_firmware.c */; };
+		1E472D742EFB06A300BA7707 /* AppleIntelTGLEGLFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472D072EFB06A300BA7707 /* AppleIntelTGLEGLFramebuffer.h */; };
+		1E472D762EFB06A300BA7707 /* IntelPort.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E472D092EFB06A300BA7707 /* IntelPort.h */; };
+		1E77E50D2EFD947A00C695BF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E77E5002EFD947A00C695BF /* Info.plist */; };
+		1E77E50E2EFD947A00C695BF /* AppleIntelTGLIOAccelerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E5012EFD947A00C695BF /* AppleIntelTGLIOAccelerator.cpp */; };
+		1E77E5112EFD947A00C695BF /* linux_mm.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E77E5042EFD947A00C695BF /* linux_mm.h */; };
+		1E77E5122EFD947A00C695BF /* linux_sync.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E77E5052EFD947A00C695BF /* linux_sync.h */; };
+		1E77E5142EFD947A00C695BF /* linux_time.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E77E5072EFD947A00C695BF /* linux_time.h */; };
+		1E77E5152EFD947A00C695BF /* linux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E77E5082EFD947A00C695BF /* linux_types.h */; };
+		1E77E5162EFD947A00C695BF /* linux_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E77E5092EFD947A00C695BF /* linux_compat.h */; };
+		1E77E5172EFD947A00C695BF /* linux_pci.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E77E50A2EFD947A00C695BF /* linux_pci.h */; };
+		1E77E5182EFD947A00C695BF /* AppleIntelTGLIOAccelerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E77E50B2EFD947A00C695BF /* AppleIntelTGLIOAccelerator.h */; };
+		1E87F99A2F348D1A0007F171 /* AppleIntelTGLIOSurfaceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E87F9992F348D1A0007F171 /* AppleIntelTGLIOSurfaceManager.cpp */; };
+		1E899FCE2F0C23210066B599 /* IntelFence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E899FCC2F0C23210066B599 /* IntelFence.cpp */; };
+		1E899FCF2F0C23210066B599 /* IntelFence.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E899FCD2F0C23210066B599 /* IntelFence.h */; };
+		1E947F1E2F32334D00AFCD17 /* AppleIntelTGLIOAcceleratorClients.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E947F1D2F32334D00AFCD17 /* AppleIntelTGLIOAcceleratorClients.cpp */; };
+		1E947F202F32338F00AFCD17 /* AppleIntelTGLIOAcceleratorClients.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E947F1F2F32338F00AFCD17 /* AppleIntelTGLIOAcceleratorClients.h */; };
+		1EF87BDA2F3100640053695B /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF87BD92F3100640053695B /* Metal.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E0D41292F0EC44900795451 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		1E0D412B2F0EC47800795451 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		1E0D412D2F0EC49600795451 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1E1150692F6B12F000D3B77C /* IOAcceleratorFamily2.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; name = IOAcceleratorFamily2.kext; path = ../../../Desktop/IOAcceleratorFamily2.kext; sourceTree = "<group>"; };
+		1E1431182EF31A9F003F398D /* AppleIntelTGLController.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleIntelTGLController.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E40AA812F338A2E00C73AF7 /* AppleIntelTGLIOSurfaceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleIntelTGLIOSurfaceManager.h; sourceTree = "<group>"; };
+		1E472C9D2EFB06A000BA7707 /* IntelPerformance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelPerformance.h; sourceTree = "<group>"; };
+		1E472C9E2EFB06A000BA7707 /* FakeIrisXEGuC_firmware.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FakeIrisXEGuC_firmware.hpp; sourceTree = "<group>"; };
+		1E472C9F2EFB06A000BA7707 /* IntelSynchronization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelSynchronization.h; sourceTree = "<group>"; };
+		1E472CA02EFB06A000BA7707 /* IntelRequestOptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelRequestOptimizer.cpp; sourceTree = "<group>"; };
+		1E472CA12EFB06A000BA7707 /* IntelVideoPostProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelVideoPostProcessing.h; sourceTree = "<group>"; };
+		1E472CA22EFB06A000BA7707 /* IntelContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelContext.cpp; sourceTree = "<group>"; };
+		1E472CA32EFB06A000BA7707 /* IntelModeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelModeSet.h; sourceTree = "<group>"; };
+		1E472CA42EFB06A000BA7707 /* IntelFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelFramebuffer.h; sourceTree = "<group>"; };
+		1E472CA52EFB06A000BA7707 /* IntelGuC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGuC.h; sourceTree = "<group>"; };
+		1E472CA62EFB06A000BA7707 /* IntelDisplayInterrupts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelDisplayInterrupts.cpp; sourceTree = "<group>"; };
+		1E472CA72EFB06A000BA7707 /* IntelSynchronization.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelSynchronization.cpp; sourceTree = "<group>"; };
+		1E472CA82EFB06A000BA7707 /* IntelFramebuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelFramebuffer.cpp; sourceTree = "<group>"; };
+		1E472CA92EFB06A000BA7707 /* IntelDPLinkTraining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelDPLinkTraining.h; sourceTree = "<group>"; };
+		1E472CAA2EFB06A000BA7707 /* IntelGTT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGTT.h; sourceTree = "<group>"; };
+		1E472CAB2EFB06A000BA7707 /* IntelDPLinkTraining.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelDPLinkTraining.cpp; sourceTree = "<group>"; };
+		1E472CAC2EFB06A000BA7707 /* IntelDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelDisplay.cpp; sourceTree = "<group>"; };
+		1E472CAD2EFB06A000BA7707 /* IntelRuntimePM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelRuntimePM.cpp; sourceTree = "<group>"; };
+		1E472CAE2EFB06A000BA7707 /* IntelPerformance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelPerformance.cpp; sourceTree = "<group>"; };
+		1E472CAF2EFB06A000BA7707 /* AppleIntelTGLEGLFramebuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleIntelTGLEGLFramebuffer.cpp; sourceTree = "<group>"; };
+		1E472CB02EFB06A000BA7707 /* IntelRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelRequest.cpp; sourceTree = "<group>"; };
+		1E472CB12EFB06A000BA7707 /* IntelMetalComputeEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalComputeEncoder.cpp; sourceTree = "<group>"; };
+		1E472CB22EFB06A000BA7707 /* IntelContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelContext.h; sourceTree = "<group>"; };
+		1E472CB32EFB06A000BA7707 /* IntelBatchValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelBatchValidator.h; sourceTree = "<group>"; };
+		1E472CB52EFB06A000BA7707 /* IntelDPAux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelDPAux.cpp; sourceTree = "<group>"; };
+		1E472CB62EFB06A000BA7707 /* IntelMetalCommandBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalCommandBuffer.cpp; sourceTree = "<group>"; };
+		1E472CB72EFB06A000BA7707 /* IntelCompute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelCompute.h; sourceTree = "<group>"; };
+		1E472CB82EFB06A000BA7707 /* IntelMetalTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalTexture.h; sourceTree = "<group>"; };
+		1E472CB92EFB06A000BA7707 /* intel_display_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intel_display_types.h; sourceTree = "<group>"; };
+		1E472CBA2EFB06A000BA7707 /* IntelGEM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGEM.cpp; sourceTree = "<group>"; };
+		1E472CBB2EFB06A000BA7707 /* IntelGTInterrupts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGTInterrupts.h; sourceTree = "<group>"; };
+		1E472CBC2EFB06A000BA7707 /* IntelDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelDisplay.h; sourceTree = "<group>"; };
+		1E472CBD2EFB06A000BA7707 /* IntelMetalSamplerState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalSamplerState.cpp; sourceTree = "<group>"; };
+		1E472CBE2EFB06A100BA7707 /* IntelModeSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelModeSet.cpp; sourceTree = "<group>"; };
+		1E472CBF2EFB06A100BA7707 /* IntelMemoryOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMemoryOptimizer.h; sourceTree = "<group>"; };
+		1E472CC02EFB06A100BA7707 /* IntelVideoDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelVideoDecoder.cpp; sourceTree = "<group>"; };
+		1E472CC12EFB06A100BA7707 /* IntelGuCSubmission.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGuCSubmission.cpp; sourceTree = "<group>"; };
+		1E472CC22EFB06A100BA7707 /* intel_power_regs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intel_power_regs.h; sourceTree = "<group>"; };
+		1E472CC32EFB06A100BA7707 /* IntelMetalShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalShader.cpp; sourceTree = "<group>"; };
+		1E472CC42EFB06A100BA7707 /* IntelGuCSubmission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGuCSubmission.h; sourceTree = "<group>"; };
+		1E472CC52EFB06A100BA7707 /* IntelGEM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGEM.h; sourceTree = "<group>"; };
+		1E472CC62EFB06A100BA7707 /* IntelRingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelRingBuffer.cpp; sourceTree = "<group>"; };
+		1E472CC72EFB06A100BA7707 /* AppleIntelTGLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleIntelTGLController.h; sourceTree = "<group>"; };
+		1E472CC82EFB06A100BA7707 /* IntelVideoEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelVideoEncoder.cpp; sourceTree = "<group>"; };
+		1E472CC92EFB06A100BA7707 /* IntelPowerManagement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelPowerManagement.cpp; sourceTree = "<group>"; };
+		1E472CCA2EFB06A100BA7707 /* IntelGTInterrupts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGTInterrupts.cpp; sourceTree = "<group>"; };
+		1E472CCB2EFB06A100BA7707 /* Intel3DPipeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Intel3DPipeline.cpp; sourceTree = "<group>"; };
+		1E472CCC2EFB06A100BA7707 /* IntelVideoPostProcessing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelVideoPostProcessing.cpp; sourceTree = "<group>"; };
+		1E472CCD2EFB06A100BA7707 /* IntelDisplayInterrupts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelDisplayInterrupts.h; sourceTree = "<group>"; };
+		1E472CCE2EFB06A100BA7707 /* IntelMetalRenderPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalRenderPipeline.h; sourceTree = "<group>"; };
+		1E472CCF2EFB06A100BA7707 /* IntelPipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelPipe.cpp; sourceTree = "<group>"; };
+		1E472CD02EFB06A100BA7707 /* IntelGTPowerManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGTPowerManagement.h; sourceTree = "<group>"; };
+		1E472CD12EFB06A100BA7707 /* IntelMemoryOptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMemoryOptimizer.cpp; sourceTree = "<group>"; };
+		1E472CD22EFB06A100BA7707 /* IntelMetalCommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalCommandQueue.cpp; sourceTree = "<group>"; };
+		1E472CD32EFB06A100BA7707 /* IntelGEMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGEMObject.h; sourceTree = "<group>"; };
+		1E472CD42EFB06A100BA7707 /* IntelDPLL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelDPLL.cpp; sourceTree = "<group>"; };
+		1E472CD52EFB06A100BA7707 /* IntelCompute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelCompute.cpp; sourceTree = "<group>"; };
+		1E472CD62EFB06A100BA7707 /* IntelPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelPipe.h; sourceTree = "<group>"; };
+		1E472CD72EFB06A100BA7707 /* IntelMetalBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalBuffer.h; sourceTree = "<group>"; };
+		1E472CD82EFB06A100BA7707 /* Intel3DPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intel3DPipeline.h; sourceTree = "<group>"; };
+		1E472CD92EFB06A100BA7707 /* IntelGuCSLPC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGuCSLPC.cpp; sourceTree = "<group>"; };
+		1E472CDA2EFB06A100BA7707 /* IntelDPLL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelDPLL.h; sourceTree = "<group>"; };
+		1E472CDB2EFB06A100BA7707 /* IntelMetalCommandQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalCommandQueue.h; sourceTree = "<group>"; };
+		1E472CDC2EFB06A100BA7707 /* IntelBatchBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelBatchBuffer.cpp; sourceTree = "<group>"; };
+		1E472CDD2EFB06A100BA7707 /* IntelGuC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGuC.cpp; sourceTree = "<group>"; };
+		1E472CDE2EFB06A100BA7707 /* IntelVideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelVideoEncoder.h; sourceTree = "<group>"; };
+		1E472CDF2EFB06A100BA7707 /* IntelGTT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGTT.cpp; sourceTree = "<group>"; };
+		1E472CE02EFB06A200BA7707 /* IntelMetalCommandTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalCommandTranslator.h; sourceTree = "<group>"; };
+		1E472CE22EFB06A200BA7707 /* IntelVideoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelVideoDecoder.h; sourceTree = "<group>"; };
+		1E472CE32EFB06A200BA7707 /* IntelMetalComputeEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalComputeEncoder.h; sourceTree = "<group>"; };
+		1E472CE42EFB06A200BA7707 /* IntelMetalRenderTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalRenderTarget.h; sourceTree = "<group>"; };
+		1E472CE52EFB06A200BA7707 /* IntelMetalShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalShader.h; sourceTree = "<group>"; };
+		1E472CE62EFB06A200BA7707 /* IntelMetalSamplerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalSamplerState.h; sourceTree = "<group>"; };
+		1E472CE72EFB06A200BA7707 /* IntelGTPowerManagement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGTPowerManagement.cpp; sourceTree = "<group>"; };
+		1E472CE82EFB06A200BA7707 /* IntelMetalComputePipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalComputePipeline.h; sourceTree = "<group>"; };
+		1E472CE92EFB06A200BA7707 /* IntelPowerManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelPowerManagement.h; sourceTree = "<group>"; };
+		1E472CEA2EFB06A200BA7707 /* IntelPPGTT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelPPGTT.h; sourceTree = "<group>"; };
+		1E472CEB2EFB06A200BA7707 /* IntelBatchBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelBatchBuffer.h; sourceTree = "<group>"; };
+		1E472CEC2EFB06A200BA7707 /* IntelRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelRequest.h; sourceTree = "<group>"; };
+		1E472CEE2EFB06A200BA7707 /* IntelGuCSLPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGuCSLPC.h; sourceTree = "<group>"; };
+		1E472CEF2EFB06A200BA7707 /* IntelGEMObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGEMObject.cpp; sourceTree = "<group>"; };
+		1E472CF02EFB06A200BA7707 /* IntelPort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelPort.cpp; sourceTree = "<group>"; };
+		1E472CF12EFB06A200BA7707 /* IntelGuCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelGuCLog.h; sourceTree = "<group>"; };
+		1E472CF22EFB06A200BA7707 /* IntelBatchValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelBatchValidator.cpp; sourceTree = "<group>"; };
+		1E472CF32EFB06A200BA7707 /* IntelGuCLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelGuCLog.cpp; sourceTree = "<group>"; };
+		1E472CF42EFB06A200BA7707 /* IntelBlitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelBlitter.cpp; sourceTree = "<group>"; };
+		1E472CF52EFB06A200BA7707 /* IntelMetalRenderTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalRenderTarget.cpp; sourceTree = "<group>"; };
+		1E472CF62EFB06A200BA7707 /* IntelMetalComputePipeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalComputePipeline.cpp; sourceTree = "<group>"; };
+		1E472CF72EFB06A200BA7707 /* IntelMetalCommandBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelMetalCommandBuffer.h; sourceTree = "<group>"; };
+		1E472CF82EFB06A200BA7707 /* IntelUncore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelUncore.cpp; sourceTree = "<group>"; };
+		1E472CF92EFB06A200BA7707 /* IntelMetalCommandTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalCommandTranslator.cpp; sourceTree = "<group>"; };
+		1E472CFA2EFB06A200BA7707 /* IntelBlitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelBlitter.h; sourceTree = "<group>"; };
+		1E472CFB2EFB06A200BA7707 /* IntelMetalRenderPipeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalRenderPipeline.cpp; sourceTree = "<group>"; };
+		1E472CFC2EFB06A200BA7707 /* IntelRingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelRingBuffer.h; sourceTree = "<group>"; };
+		1E472CFD2EFB06A200BA7707 /* IntelDPAux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelDPAux.h; sourceTree = "<group>"; };
+		1E472CFE2EFB06A200BA7707 /* IntelUncore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelUncore.h; sourceTree = "<group>"; };
+		1E472CFF2EFB06A200BA7707 /* IntelPPGTT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelPPGTT.cpp; sourceTree = "<group>"; };
+		1E472D002EFB06A200BA7707 /* IntelMetalTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalTexture.cpp; sourceTree = "<group>"; };
+		1E472D012EFB06A300BA7707 /* AppleIntelTGLController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleIntelTGLController.cpp; sourceTree = "<group>"; };
+		1E472D022EFB06A300BA7707 /* intel_gt_power_regs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intel_gt_power_regs.h; sourceTree = "<group>"; };
+		1E472D032EFB06A300BA7707 /* IntelRequestOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelRequestOptimizer.h; sourceTree = "<group>"; };
+		1E472D042EFB06A300BA7707 /* IntelMetalBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMetalBuffer.cpp; sourceTree = "<group>"; };
+		1E472D052EFB06A300BA7707 /* IntelRuntimePM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelRuntimePM.h; sourceTree = "<group>"; };
+		1E472D062EFB06A300BA7707 /* FakeIrisXEGuC_firmware.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FakeIrisXEGuC_firmware.c; sourceTree = "<group>"; };
+		1E472D072EFB06A300BA7707 /* AppleIntelTGLEGLFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleIntelTGLEGLFramebuffer.h; sourceTree = "<group>"; };
+		1E472D092EFB06A300BA7707 /* IntelPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelPort.h; sourceTree = "<group>"; };
+		1E77E5002EFD947A00C695BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E77E5012EFD947A00C695BF /* AppleIntelTGLIOAccelerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleIntelTGLIOAccelerator.cpp; sourceTree = "<group>"; };
+		1E77E5042EFD947A00C695BF /* linux_mm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linux_mm.h; sourceTree = "<group>"; };
+		1E77E5052EFD947A00C695BF /* linux_sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linux_sync.h; sourceTree = "<group>"; };
+		1E77E5072EFD947A00C695BF /* linux_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linux_time.h; sourceTree = "<group>"; };
+		1E77E5082EFD947A00C695BF /* linux_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linux_types.h; sourceTree = "<group>"; };
+		1E77E5092EFD947A00C695BF /* linux_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linux_compat.h; sourceTree = "<group>"; };
+		1E77E50A2EFD947A00C695BF /* linux_pci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linux_pci.h; sourceTree = "<group>"; };
+		1E77E50B2EFD947A00C695BF /* AppleIntelTGLIOAccelerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleIntelTGLIOAccelerator.h; sourceTree = "<group>"; };
+		1E87F9992F348D1A0007F171 /* AppleIntelTGLIOSurfaceManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppleIntelTGLIOSurfaceManager.cpp; sourceTree = "<group>"; };
+		1E899FCC2F0C23210066B599 /* IntelFence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IntelFence.cpp; sourceTree = "<group>"; };
+		1E899FCD2F0C23210066B599 /* IntelFence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntelFence.h; sourceTree = "<group>"; };
+		1E947F1D2F32334D00AFCD17 /* AppleIntelTGLIOAcceleratorClients.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppleIntelTGLIOAcceleratorClients.cpp; sourceTree = "<group>"; };
+		1E947F1F2F32338F00AFCD17 /* AppleIntelTGLIOAcceleratorClients.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleIntelTGLIOAcceleratorClients.h; sourceTree = "<group>"; };
+		1EF87BD92F3100640053695B /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E1431152EF31A9F003F398D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF87BDA2F3100640053695B /* Metal.framework in Frameworks */,
+				1E0D412E2F0EC49600795451 /* CoreGraphics.framework in Frameworks */,
+				1E0D412C2F0EC47800795451 /* IOKit.framework in Frameworks */,
+				1E0D412A2F0EC44900795451 /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E0D41282F0EC44900795451 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E1150692F6B12F000D3B77C /* IOAcceleratorFamily2.kext */,
+				1EF87BD92F3100640053695B /* Metal.framework */,
+				1E0D412D2F0EC49600795451 /* CoreGraphics.framework */,
+				1E0D412B2F0EC47800795451 /* IOKit.framework */,
+				1E0D41292F0EC44900795451 /* IOSurface.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E14310E2EF31A9F003F398D = {
+			isa = PBXGroup;
+			children = (
+				1E14311A2EF31A9F003F398D /* AppleIntelTGLController */,
+				1E1431192EF31A9F003F398D /* Products */,
+				1E0D41282F0EC44900795451 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E1431192EF31A9F003F398D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E1431182EF31A9F003F398D /* AppleIntelTGLController.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E14311A2EF31A9F003F398D /* AppleIntelTGLController */ = {
+			isa = PBXGroup;
+			children = (
+				1E472D062EFB06A300BA7707 /* FakeIrisXEGuC_firmware.c */,
+				1E472C9E2EFB06A000BA7707 /* FakeIrisXEGuC_firmware.hpp */,
+				1E77E5002EFD947A00C695BF /* Info.plist */,
+				1E472CB92EFB06A000BA7707 /* intel_display_types.h */,
+				1E472D022EFB06A300BA7707 /* intel_gt_power_regs.h */,
+				1E472CC22EFB06A100BA7707 /* intel_power_regs.h */,
+				1E472CCB2EFB06A100BA7707 /* Intel3DPipeline.cpp */,
+				1E472CD82EFB06A100BA7707 /* Intel3DPipeline.h */,
+				1E472CDC2EFB06A100BA7707 /* IntelBatchBuffer.cpp */,
+				1E472CEB2EFB06A200BA7707 /* IntelBatchBuffer.h */,
+				1E472CF22EFB06A200BA7707 /* IntelBatchValidator.cpp */,
+				1E472CB32EFB06A000BA7707 /* IntelBatchValidator.h */,
+				1E472CF42EFB06A200BA7707 /* IntelBlitter.cpp */,
+				1E472CFA2EFB06A200BA7707 /* IntelBlitter.h */,
+				1E472CD52EFB06A100BA7707 /* IntelCompute.cpp */,
+				1E472CB72EFB06A000BA7707 /* IntelCompute.h */,
+				1E472CA22EFB06A000BA7707 /* IntelContext.cpp */,
+				1E472CB22EFB06A000BA7707 /* IntelContext.h */,
+				1E472CAC2EFB06A000BA7707 /* IntelDisplay.cpp */,
+				1E472CBC2EFB06A000BA7707 /* IntelDisplay.h */,
+				1E472CA62EFB06A000BA7707 /* IntelDisplayInterrupts.cpp */,
+				1E472CCD2EFB06A100BA7707 /* IntelDisplayInterrupts.h */,
+				1E472CB52EFB06A000BA7707 /* IntelDPAux.cpp */,
+				1E472CFD2EFB06A200BA7707 /* IntelDPAux.h */,
+				1E472CAB2EFB06A000BA7707 /* IntelDPLinkTraining.cpp */,
+				1E472CA92EFB06A000BA7707 /* IntelDPLinkTraining.h */,
+				1E472CD42EFB06A100BA7707 /* IntelDPLL.cpp */,
+				1E472CDA2EFB06A100BA7707 /* IntelDPLL.h */,
+				1E899FCC2F0C23210066B599 /* IntelFence.cpp */,
+				1E899FCD2F0C23210066B599 /* IntelFence.h */,
+				1E472CA82EFB06A000BA7707 /* IntelFramebuffer.cpp */,
+				1E472CA42EFB06A000BA7707 /* IntelFramebuffer.h */,
+				1E472CBA2EFB06A000BA7707 /* IntelGEM.cpp */,
+				1E472CC52EFB06A100BA7707 /* IntelGEM.h */,
+				1E472CEF2EFB06A200BA7707 /* IntelGEMObject.cpp */,
+				1E472CD32EFB06A100BA7707 /* IntelGEMObject.h */,
+				1E472CCA2EFB06A100BA7707 /* IntelGTInterrupts.cpp */,
+				1E472CBB2EFB06A000BA7707 /* IntelGTInterrupts.h */,
+				1E472CE72EFB06A200BA7707 /* IntelGTPowerManagement.cpp */,
+				1E472CD02EFB06A100BA7707 /* IntelGTPowerManagement.h */,
+				1E472CDF2EFB06A100BA7707 /* IntelGTT.cpp */,
+				1E472CAA2EFB06A000BA7707 /* IntelGTT.h */,
+				1E472CDD2EFB06A100BA7707 /* IntelGuC.cpp */,
+				1E472CA52EFB06A000BA7707 /* IntelGuC.h */,
+				1E472CF32EFB06A200BA7707 /* IntelGuCLog.cpp */,
+				1E472CF12EFB06A200BA7707 /* IntelGuCLog.h */,
+				1E472CD92EFB06A100BA7707 /* IntelGuCSLPC.cpp */,
+				1E472CEE2EFB06A200BA7707 /* IntelGuCSLPC.h */,
+				1E472CC12EFB06A100BA7707 /* IntelGuCSubmission.cpp */,
+				1E472CC42EFB06A100BA7707 /* IntelGuCSubmission.h */,
+				1E472D012EFB06A300BA7707 /* AppleIntelTGLController.cpp */,
+				1E472CC72EFB06A100BA7707 /* AppleIntelTGLController.h */,
+				1E77E5012EFD947A00C695BF /* AppleIntelTGLIOAccelerator.cpp */,
+				1E77E50B2EFD947A00C695BF /* AppleIntelTGLIOAccelerator.h */,
+				1E947F1D2F32334D00AFCD17 /* AppleIntelTGLIOAcceleratorClients.cpp */,
+				1E947F1F2F32338F00AFCD17 /* AppleIntelTGLIOAcceleratorClients.h */,
+				1E472CAF2EFB06A000BA7707 /* AppleIntelTGLEGLFramebuffer.cpp */,
+				1E472D072EFB06A300BA7707 /* AppleIntelTGLEGLFramebuffer.h */,
+				1E40AA812F338A2E00C73AF7 /* AppleIntelTGLIOSurfaceManager.h */,
+				1E87F9992F348D1A0007F171 /* AppleIntelTGLIOSurfaceManager.cpp */,
+				1E472CD12EFB06A100BA7707 /* IntelMemoryOptimizer.cpp */,
+				1E472CBF2EFB06A100BA7707 /* IntelMemoryOptimizer.h */,
+				1E472D042EFB06A300BA7707 /* IntelMetalBuffer.cpp */,
+				1E472CD72EFB06A100BA7707 /* IntelMetalBuffer.h */,
+				1E472CB62EFB06A000BA7707 /* IntelMetalCommandBuffer.cpp */,
+				1E472CF72EFB06A200BA7707 /* IntelMetalCommandBuffer.h */,
+				1E472CD22EFB06A100BA7707 /* IntelMetalCommandQueue.cpp */,
+				1E472CDB2EFB06A100BA7707 /* IntelMetalCommandQueue.h */,
+				1E472CF92EFB06A200BA7707 /* IntelMetalCommandTranslator.cpp */,
+				1E472CE02EFB06A200BA7707 /* IntelMetalCommandTranslator.h */,
+				1E472CB12EFB06A000BA7707 /* IntelMetalComputeEncoder.cpp */,
+				1E472CE32EFB06A200BA7707 /* IntelMetalComputeEncoder.h */,
+				1E472CF62EFB06A200BA7707 /* IntelMetalComputePipeline.cpp */,
+				1E472CE82EFB06A200BA7707 /* IntelMetalComputePipeline.h */,
+				1E472CFB2EFB06A200BA7707 /* IntelMetalRenderPipeline.cpp */,
+				1E472CCE2EFB06A100BA7707 /* IntelMetalRenderPipeline.h */,
+				1E472CF52EFB06A200BA7707 /* IntelMetalRenderTarget.cpp */,
+				1E472CE42EFB06A200BA7707 /* IntelMetalRenderTarget.h */,
+				1E472CBD2EFB06A000BA7707 /* IntelMetalSamplerState.cpp */,
+				1E472CE62EFB06A200BA7707 /* IntelMetalSamplerState.h */,
+				1E472CC32EFB06A100BA7707 /* IntelMetalShader.cpp */,
+				1E472CE52EFB06A200BA7707 /* IntelMetalShader.h */,
+				1E472D002EFB06A200BA7707 /* IntelMetalTexture.cpp */,
+				1E472CB82EFB06A000BA7707 /* IntelMetalTexture.h */,
+				1E472CBE2EFB06A100BA7707 /* IntelModeSet.cpp */,
+				1E472CA32EFB06A000BA7707 /* IntelModeSet.h */,
+				1E472CAE2EFB06A000BA7707 /* IntelPerformance.cpp */,
+				1E472C9D2EFB06A000BA7707 /* IntelPerformance.h */,
+				1E472CCF2EFB06A100BA7707 /* IntelPipe.cpp */,
+				1E472CD62EFB06A100BA7707 /* IntelPipe.h */,
+				1E472CF02EFB06A200BA7707 /* IntelPort.cpp */,
+				1E472D092EFB06A300BA7707 /* IntelPort.h */,
+				1E472CC92EFB06A100BA7707 /* IntelPowerManagement.cpp */,
+				1E472CE92EFB06A200BA7707 /* IntelPowerManagement.h */,
+				1E472CFF2EFB06A200BA7707 /* IntelPPGTT.cpp */,
+				1E472CEA2EFB06A200BA7707 /* IntelPPGTT.h */,
+				1E472CB02EFB06A000BA7707 /* IntelRequest.cpp */,
+				1E472CEC2EFB06A200BA7707 /* IntelRequest.h */,
+				1E472CA02EFB06A000BA7707 /* IntelRequestOptimizer.cpp */,
+				1E472D032EFB06A300BA7707 /* IntelRequestOptimizer.h */,
+				1E472CC62EFB06A100BA7707 /* IntelRingBuffer.cpp */,
+				1E472CFC2EFB06A200BA7707 /* IntelRingBuffer.h */,
+				1E472CAD2EFB06A000BA7707 /* IntelRuntimePM.cpp */,
+				1E472D052EFB06A300BA7707 /* IntelRuntimePM.h */,
+				1E472CA72EFB06A000BA7707 /* IntelSynchronization.cpp */,
+				1E472C9F2EFB06A000BA7707 /* IntelSynchronization.h */,
+				1E472CF82EFB06A200BA7707 /* IntelUncore.cpp */,
+				1E472CFE2EFB06A200BA7707 /* IntelUncore.h */,
+				1E472CC02EFB06A100BA7707 /* IntelVideoDecoder.cpp */,
+				1E472CE22EFB06A200BA7707 /* IntelVideoDecoder.h */,
+				1E472CC82EFB06A100BA7707 /* IntelVideoEncoder.cpp */,
+				1E472CDE2EFB06A100BA7707 /* IntelVideoEncoder.h */,
+				1E472CCC2EFB06A100BA7707 /* IntelVideoPostProcessing.cpp */,
+				1E472CA12EFB06A000BA7707 /* IntelVideoPostProcessing.h */,
+				1E77E5092EFD947A00C695BF /* linux_compat.h */,
+				1E77E5042EFD947A00C695BF /* linux_mm.h */,
+				1E77E50A2EFD947A00C695BF /* linux_pci.h */,
+				1E77E5052EFD947A00C695BF /* linux_sync.h */,
+				1E77E5072EFD947A00C695BF /* linux_time.h */,
+				1E77E5082EFD947A00C695BF /* linux_types.h */,
+			);
+			path = AppleIntelTGLController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E1431132EF31A9F003F398D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E5172EFD947A00C695BF /* linux_pci.h in Headers */,
+				1E472D4D2EFB06A300BA7707 /* IntelMetalCommandTranslator.h in Headers */,
+				1E472D452EFB06A300BA7707 /* Intel3DPipeline.h in Headers */,
+				1E472D282EFB06A300BA7707 /* IntelGTInterrupts.h in Headers */,
+				1E472D312EFB06A300BA7707 /* IntelGuCSubmission.h in Headers */,
+				1E472D702EFB06A300BA7707 /* IntelRequestOptimizer.h in Headers */,
+				1E472D512EFB06A300BA7707 /* IntelMetalRenderTarget.h in Headers */,
+				1E472D502EFB06A300BA7707 /* IntelMetalComputeEncoder.h in Headers */,
+				1E472D4F2EFB06A300BA7707 /* IntelVideoDecoder.h in Headers */,
+				1E472D292EFB06A300BA7707 /* IntelDisplay.h in Headers */,
+				1E472D0B2EFB06A300BA7707 /* FakeIrisXEGuC_firmware.hpp in Headers */,
+				1E40AA822F338A2E00C73AF7 /* AppleIntelTGLIOSurfaceManager.h in Headers */,
+				1E472D5E2EFB06A300BA7707 /* IntelGuCLog.h in Headers */,
+				1E472D112EFB06A300BA7707 /* IntelFramebuffer.h in Headers */,
+				1E472D6A2EFB06A300BA7707 /* IntelDPAux.h in Headers */,
+				1E472D442EFB06A300BA7707 /* IntelMetalBuffer.h in Headers */,
+				1E472D722EFB06A300BA7707 /* IntelRuntimePM.h in Headers */,
+				1E472D262EFB06A300BA7707 /* intel_display_types.h in Headers */,
+				1E472D172EFB06A300BA7707 /* IntelGTT.h in Headers */,
+				1E472D2F2EFB06A300BA7707 /* intel_power_regs.h in Headers */,
+				1E472D532EFB06A300BA7707 /* IntelMetalSamplerState.h in Headers */,
+				1E472D742EFB06A300BA7707 /* AppleIntelTGLEGLFramebuffer.h in Headers */,
+				1E472D242EFB06A300BA7707 /* IntelCompute.h in Headers */,
+				1E472D0A2EFB06A300BA7707 /* IntelPerformance.h in Headers */,
+				1E472D3A2EFB06A300BA7707 /* IntelDisplayInterrupts.h in Headers */,
+				1E472D562EFB06A300BA7707 /* IntelPowerManagement.h in Headers */,
+				1E472D2C2EFB06A300BA7707 /* IntelMemoryOptimizer.h in Headers */,
+				1E472D402EFB06A300BA7707 /* IntelGEMObject.h in Headers */,
+				1E947F202F32338F00AFCD17 /* AppleIntelTGLIOAcceleratorClients.h in Headers */,
+				1E472D482EFB06A300BA7707 /* IntelMetalCommandQueue.h in Headers */,
+				1E472D642EFB06A300BA7707 /* IntelMetalCommandBuffer.h in Headers */,
+				1E472D6B2EFB06A300BA7707 /* IntelUncore.h in Headers */,
+				1E472D582EFB06A300BA7707 /* IntelBatchBuffer.h in Headers */,
+				1E77E5162EFD947A00C695BF /* linux_compat.h in Headers */,
+				1E899FCF2F0C23210066B599 /* IntelFence.h in Headers */,
+				1E472D252EFB06A300BA7707 /* IntelMetalTexture.h in Headers */,
+				1E472D3B2EFB06A300BA7707 /* IntelMetalRenderPipeline.h in Headers */,
+				1E77E5182EFD947A00C695BF /* AppleIntelTGLIOAccelerator.h in Headers */,
+				1E472D122EFB06A300BA7707 /* IntelGuC.h in Headers */,
+				1E472D592EFB06A300BA7707 /* IntelRequest.h in Headers */,
+				1E77E5152EFD947A00C695BF /* linux_types.h in Headers */,
+				1E472D432EFB06A300BA7707 /* IntelPipe.h in Headers */,
+				1E472D6F2EFB06A300BA7707 /* intel_gt_power_regs.h in Headers */,
+				1E472D572EFB06A300BA7707 /* IntelPPGTT.h in Headers */,
+				1E472D552EFB06A300BA7707 /* IntelMetalComputePipeline.h in Headers */,
+				1E472D692EFB06A300BA7707 /* IntelRingBuffer.h in Headers */,
+				1E472D522EFB06A300BA7707 /* IntelMetalShader.h in Headers */,
+				1E77E5122EFD947A00C695BF /* linux_sync.h in Headers */,
+				1E472D472EFB06A300BA7707 /* IntelDPLL.h in Headers */,
+				1E472D762EFB06A300BA7707 /* IntelPort.h in Headers */,
+				1E472D342EFB06A300BA7707 /* AppleIntelTGLController.h in Headers */,
+				1E472D202EFB06A300BA7707 /* IntelBatchValidator.h in Headers */,
+				1E77E5142EFD947A00C695BF /* linux_time.h in Headers */,
+				1E472D5B2EFB06A300BA7707 /* IntelGuCSLPC.h in Headers */,
+				1E472D672EFB06A300BA7707 /* IntelBlitter.h in Headers */,
+				1E472D102EFB06A300BA7707 /* IntelModeSet.h in Headers */,
+				1E472D322EFB06A300BA7707 /* IntelGEM.h in Headers */,
+				1E472D3D2EFB06A300BA7707 /* IntelGTPowerManagement.h in Headers */,
+				1E472D162EFB06A300BA7707 /* IntelDPLinkTraining.h in Headers */,
+				1E472D1F2EFB06A300BA7707 /* IntelContext.h in Headers */,
+				1E472D4B2EFB06A300BA7707 /* IntelVideoEncoder.h in Headers */,
+				1E472D0E2EFB06A300BA7707 /* IntelVideoPostProcessing.h in Headers */,
+				1E472D0C2EFB06A300BA7707 /* IntelSynchronization.h in Headers */,
+				1E77E5112EFD947A00C695BF /* linux_mm.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1E1431172EF31A9F003F398D /* AppleIntelTGLController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E1431222EF31A9F003F398D /* Build configuration list for PBXNativeTarget "AppleIntelTGLController" */;
+			buildPhases = (
+				1E1431132EF31A9F003F398D /* Headers */,
+				1E1431142EF31A9F003F398D /* Sources */,
+				1E1431152EF31A9F003F398D /* Frameworks */,
+				1E1431162EF31A9F003F398D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppleIntelTGLController;
+			productName = AppleIntelTGLController;
+			productReference = 1E1431182EF31A9F003F398D /* AppleIntelTGLController.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E14310F2EF31A9F003F398D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					1E1431172EF31A9F003F398D = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = 1E1431122EF31A9F003F398D /* Build configuration list for PBXProject "AppleIntelTGLController" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E14310E2EF31A9F003F398D;
+			productRefGroup = 1E1431192EF31A9F003F398D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E1431172EF31A9F003F398D /* AppleIntelTGLController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E1431162EF31A9F003F398D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E77E50D2EFD947A00C695BF /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E1431142EF31A9F003F398D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E472D1C2EFB06A300BA7707 /* AppleIntelTGLEGLFramebuffer.cpp in Sources */,
+				1E472D3E2EFB06A300BA7707 /* IntelMemoryOptimizer.cpp in Sources */,
+				1E87F99A2F348D1A0007F171 /* AppleIntelTGLIOSurfaceManager.cpp in Sources */,
+				1E472D2E2EFB06A300BA7707 /* IntelGuCSubmission.cpp in Sources */,
+				1E472D1E2EFB06A300BA7707 /* IntelMetalComputeEncoder.cpp in Sources */,
+				1E472D5F2EFB06A300BA7707 /* IntelBatchValidator.cpp in Sources */,
+				1E472D392EFB06A300BA7707 /* IntelVideoPostProcessing.cpp in Sources */,
+				1E472D3C2EFB06A300BA7707 /* IntelPipe.cpp in Sources */,
+				1E472D732EFB06A300BA7707 /* FakeIrisXEGuC_firmware.c in Sources */,
+				1E472D602EFB06A300BA7707 /* IntelGuCLog.cpp in Sources */,
+				1E472D1A2EFB06A300BA7707 /* IntelRuntimePM.cpp in Sources */,
+				1E472D652EFB06A300BA7707 /* IntelUncore.cpp in Sources */,
+				1E472D662EFB06A300BA7707 /* IntelMetalCommandTranslator.cpp in Sources */,
+				1E472D1B2EFB06A300BA7707 /* IntelPerformance.cpp in Sources */,
+				1E472D372EFB06A300BA7707 /* IntelGTInterrupts.cpp in Sources */,
+				1E472D132EFB06A300BA7707 /* IntelDisplayInterrupts.cpp in Sources */,
+				1E472D2B2EFB06A300BA7707 /* IntelModeSet.cpp in Sources */,
+				1E472D0F2EFB06A300BA7707 /* IntelContext.cpp in Sources */,
+				1E472D2D2EFB06A300BA7707 /* IntelVideoDecoder.cpp in Sources */,
+				1E472D422EFB06A300BA7707 /* IntelCompute.cpp in Sources */,
+				1E472D462EFB06A300BA7707 /* IntelGuCSLPC.cpp in Sources */,
+				1E472D0D2EFB06A300BA7707 /* IntelRequestOptimizer.cpp in Sources */,
+				1E472D3F2EFB06A300BA7707 /* IntelMetalCommandQueue.cpp in Sources */,
+				1E472D152EFB06A300BA7707 /* IntelFramebuffer.cpp in Sources */,
+				1E472D222EFB06A300BA7707 /* IntelDPAux.cpp in Sources */,
+				1E77E50E2EFD947A00C695BF /* AppleIntelTGLIOAccelerator.cpp in Sources */,
+				1E947F1E2F32334D00AFCD17 /* AppleIntelTGLIOAcceleratorClients.cpp in Sources */,
+				1E472D6D2EFB06A300BA7707 /* IntelMetalTexture.cpp in Sources */,
+				1E472D182EFB06A300BA7707 /* IntelDPLinkTraining.cpp in Sources */,
+				1E472D492EFB06A300BA7707 /* IntelBatchBuffer.cpp in Sources */,
+				1E472D682EFB06A300BA7707 /* IntelMetalRenderPipeline.cpp in Sources */,
+				1E472D6C2EFB06A300BA7707 /* IntelPPGTT.cpp in Sources */,
+				1E472D232EFB06A300BA7707 /* IntelMetalCommandBuffer.cpp in Sources */,
+				1E472D142EFB06A300BA7707 /* IntelSynchronization.cpp in Sources */,
+				1E472D352EFB06A300BA7707 /* IntelVideoEncoder.cpp in Sources */,
+				1E472D382EFB06A300BA7707 /* Intel3DPipeline.cpp in Sources */,
+				1E472D362EFB06A300BA7707 /* IntelPowerManagement.cpp in Sources */,
+				1E472D542EFB06A300BA7707 /* IntelGTPowerManagement.cpp in Sources */,
+				1E472D4A2EFB06A300BA7707 /* IntelGuC.cpp in Sources */,
+				1E472D5C2EFB06A300BA7707 /* IntelGEMObject.cpp in Sources */,
+				1E472D632EFB06A300BA7707 /* IntelMetalComputePipeline.cpp in Sources */,
+				1E472D302EFB06A300BA7707 /* IntelMetalShader.cpp in Sources */,
+				1E472D612EFB06A300BA7707 /* IntelBlitter.cpp in Sources */,
+				1E472D192EFB06A300BA7707 /* IntelDisplay.cpp in Sources */,
+				1E899FCE2F0C23210066B599 /* IntelFence.cpp in Sources */,
+				1E472D332EFB06A300BA7707 /* IntelRingBuffer.cpp in Sources */,
+				1E472D412EFB06A300BA7707 /* IntelDPLL.cpp in Sources */,
+				1E472D712EFB06A300BA7707 /* IntelMetalBuffer.cpp in Sources */,
+				1E472D5D2EFB06A300BA7707 /* IntelPort.cpp in Sources */,
+				1E472D272EFB06A300BA7707 /* IntelGEM.cpp in Sources */,
+				1E472D1D2EFB06A300BA7707 /* IntelRequest.cpp in Sources */,
+				1E472D6E2EFB06A300BA7707 /* AppleIntelTGLController.cpp in Sources */,
+				1E472D622EFB06A300BA7707 /* IntelMetalRenderTarget.cpp in Sources */,
+				1E472D4C2EFB06A300BA7707 /* IntelGTT.cpp in Sources */,
+				1E472D2A2EFB06A300BA7707 /* IntelMetalSamplerState.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1E1431202EF31A9F003F398D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1E1431212EF31A9F003F398D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1E1431232EF31A9F003F398D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEVELOPMENT_TEAM = RN3WRRVL6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleIntelTGLController/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.4;
+				MARKETING_VERSION = 1.0;
+				MODULE_NAME = com.anomy.driver.AppleIntelTGLController;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anomy.driver.AppleIntelTGLController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		1E1431242EF31A9F003F398D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEVELOPMENT_TEAM = RN3WRRVL6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleIntelTGLController/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.4;
+				MARKETING_VERSION = 1.0;
+				MODULE_NAME = com.anomy.driver.AppleIntelTGLController;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anomy.driver.AppleIntelTGLController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E1431122EF31A9F003F398D /* Build configuration list for PBXProject "AppleIntelTGLController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1431202EF31A9F003F398D /* Debug */,
+				1E1431212EF31A9F003F398D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1E1431222EF31A9F003F398D /* Build configuration list for PBXNativeTarget "AppleIntelTGLController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1431232EF31A9F003F398D /* Debug */,
+				1E1431242EF31A9F003F398D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E14310F2EF31A9F003F398D /* Project object */;
+}
