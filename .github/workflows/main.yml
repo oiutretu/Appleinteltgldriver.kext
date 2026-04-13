@@ -1,14 +1,11 @@
-name: Build & Release AppleIntelTGLLCDDriver.kext (Unsigned)
+name: Release AppleIntelTGLLCDDriver.kext (Unsigned)
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
   release:
     types: [created]
 
 jobs:
-  build:
+  release:
     runs-on: macos-latest
     steps:
       - name: Checkout source
@@ -28,22 +25,14 @@ jobs:
       - name: Package kext
         run: |
           cd build/Build/Products/Release
-          zip -r AppleIntelTGLController.zip AppleIntelTGLController.kext
-
-      - name: Upload artifact (for PRs)
-        if: github.event_name != 'release'
-        uses: actions/upload-artifact@v4
-        with:
-          name: AppleIntelTGLController
-          path: build/Build/Products/Release/AppleIntelTGLController.zip
+          zip -r AppleIntelTGLController-${{ github.ref_name }}.zip AppleIntelTGLController.kext
 
       - name: Upload release asset
-        if: github.event_name == 'release'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: build/Build/Products/Release/AppleIntelTGLController.zip
-          asset_name: AppleIntelTGLController.zip
+          asset_path: build/Build/Products/Release/AppleIntelTGLController-${{ github.ref_name }}.zip
+          asset_name: AppleIntelTGLController-${{ github.ref_name }}.zip
           asset_content_type: application/zip
