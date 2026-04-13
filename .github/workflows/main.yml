@@ -1,4 +1,4 @@
-name: Build AppleIntelTGLLCDDriver.kext
+name: Build AppleIntelTGLLCDDriver.kext (Unsigned)
 
 on:
   push:
@@ -15,14 +15,14 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: Build kext
+      - name: Build unsigned kext
         run: |
           xcodebuild -project AppleIntelTGLController.xcodeproj \
                      -scheme AppleIntelTGLController \
                      -configuration Release \
-                     build
+                     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
 
-      - name: Archive build artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: AppleIntelTGLLCDDriver.kext
