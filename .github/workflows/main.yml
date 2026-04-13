@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    runs-on: macos-latest
+    runs-on: macos-12   # use macOS 12 runner with older Xcode
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -22,17 +22,12 @@ jobs:
                      -derivedDataPath build \
                      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
 
-      - name: Package kext
-        run: |
-          cd build/Build/Products/Release
-          zip -r AppleIntelTGLController-${{ github.ref_name }}.zip AppleIntelTGLController.kext
-
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: build/Build/Products/Release/AppleIntelTGLController-${{ github.ref_name }}.zip
-          asset_name: AppleIntelTGLController-${{ github.ref_name }}.zip
-          asset_content_type: application/zip
+          asset_path: build/Build/Products/Release/AppleIntelTGLController.kext
+          asset_name: AppleIntelTGLController.kext
+          asset_content_type: application/octet-stream
