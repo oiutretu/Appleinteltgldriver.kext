@@ -1,15 +1,18 @@
-name: Release AppleIntelTGLLCDDriver.kext (Unsigned)
+name: Build and Push AppleIntelTGLLCDDriver.kext
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
+  pull_request:
 
 jobs:
-  release:
-    runs-on: macos-12   # pin to macOS 12 runner for older Xcode
+  build:
+    runs-on: macos-12   # pin to older runner for Xcode compatibility
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Show Xcode version
         run: xcodebuild -version
@@ -22,12 +25,11 @@ jobs:
                      -derivedDataPath build \
                      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
 
-      - name: Upload release asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: build/Build/Products/Release/AppleIntelTGLController.kext
-          asset_name: AppleIntelTGLController.kext
-          asset_content_type: application/octet-stream
+      - name: Commit built kext
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp -r build/Build/Products/Release/AppleIntelTGLController.kext ./AppleIntelTGLController.kext
+          git add AppleIntelTGLController.kext
+          git commit -m "Add built AppleIntelTGLController.kext"
+          git push origin HEAD:main
