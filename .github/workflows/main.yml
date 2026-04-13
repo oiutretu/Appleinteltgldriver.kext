@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    runs-on: macos-12   # use macOS 12 runner with older Xcode
+    runs-on: macos-12   # pin to macOS 12 runner for older Xcode
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -16,28 +16,18 @@ jobs:
 
       - name: Build unsigned kext
         run: |
-          xcodebuild \
-            -project AppleIntelTGLController.xcodeproj \
-            -scheme AppleIntelTGLController \
-            -configuration Release \
-            -derivedDataPath build \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO \
-            build
-
-      - name: Verify build output
-        run: |
-          KEXT_PATH="build/Build/Products/Release/AppleIntelTGLController.kext"
-          if [ ! -d "$KEXT_PATH" ]; then
-            echo "Error: kext not found at $KEXT_PATH"
-            exit 1
-          fi
-          echo "Build successful: $KEXT_PATH"
+          xcodebuild -project AppleIntelTGLController.xcodeproj \
+                     -scheme AppleIntelTGLController \
+                     -configuration Release \
+                     -derivedDataPath build \
+                     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
 
       - name: Upload release asset
-        run: |
-          gh release upload ${{ github.event.release.tag_name }} \
-            build/Build/Products/Release/AppleIntelTGLController.kext
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: build/Build/Products/Release/AppleIntelTGLController.kext
+          asset_name: AppleIntelTGLController.kext
+          asset_content_type: application/octet-stream
