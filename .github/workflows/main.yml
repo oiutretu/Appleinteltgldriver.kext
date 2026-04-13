@@ -23,8 +23,7 @@ jobs:
                      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
 
       - name: Upload unsigned kext
-  uses: actions/upload-artifact@v4
-  with:
-    name: AppleIntelTGLController.kext
-    path: build/Release/AppleIntelTGLController.kext
-
+        uses: actions/upload-artifact@v4
+        with:
+          name: AppleIntelTGLController.kext
+          path: build/Release/AppleIntelTGLController.kext
