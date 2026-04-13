@@ -1,9 +1,11 @@
-name: Build AppleIntelTGLLCDDriver.kext (Unsigned)
+name: Build & Release AppleIntelTGLLCDDriver.kext (Unsigned)
 
 on:
   push:
     branches: [ main ]
   pull_request:
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -23,13 +25,25 @@ jobs:
                      -derivedDataPath build \
                      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
 
-      - name: Zip kext
+      - name: Package kext
         run: |
           cd build/Build/Products/Release
-          zip -r AppleIntelTGLController.kext.zip AppleIntelTGLController.kext
+          zip -r AppleIntelTGLController.zip AppleIntelTGLController.kext
 
-      - name: Upload zipped kext
+      - name: Upload artifact (for PRs)
+        if: github.event_name != 'release'
         uses: actions/upload-artifact@v4
         with:
-          name: AppleIntelTGLController.kext
-          path: build/Build/Products/Release/AppleIntelTGLController.kext.zip
+          name: AppleIntelTGLController
+          path: build/Build/Products/Release/AppleIntelTGLController.zip
+
+      - name: Upload release asset
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: build/Build/Products/Release/AppleIntelTGLController.zip
+          asset_name: AppleIntelTGLController.zip
+          asset_content_type: application/zip
