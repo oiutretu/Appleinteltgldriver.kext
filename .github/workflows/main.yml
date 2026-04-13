@@ -1,0 +1,29 @@
+name: Build AppleIntelTGLLCDDriver.kext
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build kext
+        run: |
+          xcodebuild -project AppleIntelTGLController.xcodeproj \
+                     -scheme AppleIntelTGLController \
+                     -configuration Release \
+                     build
+
+      - name: Archive build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AppleIntelTGLLCDDriver.kext
+          path: build/Release/AppleIntelTGLLCDDriver.kext
